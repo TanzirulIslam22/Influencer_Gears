@@ -32,6 +32,10 @@
   font-weight: 400;
 }
 
+/* text colors */
+.color1 {
+  color: #3a3a3a;
+}
 /* for display-flex */
 .flex {
   display: flex;
@@ -43,9 +47,16 @@
 }
 
 /* Universal */
-body {
-  max-width: 1110px;
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+.container {
+width: 1110px;
   margin: 0 auto;
+  padding: 0 16px;
 }
 
 /* nav section */
@@ -56,6 +67,7 @@ nav {
 }
 nav div p {
   font-size: 1.5rem;
+  margin-left: -305px;
 }
 nav div ul {
   text-decoration: none;
@@ -68,20 +80,66 @@ nav div ul {
   font-size: 1rem;
 }
 
-@media only screen and (max-width: 576px) {
+/* Banner Section  */
 
+.banner {
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 100px;
+  gap: 93px;
+}
+
+.banner span {
+  font-size: 3rem;
+}
+
+.banner p {
+  font-size: 1rem;
+  margin-top: 16px;
+}
+
+.banner button {
+  width: 196px;
+  height: 44px;
+  border-radius: 41px;
+  background-color: #e02c6d;
+  border: none;
+  color: #ffffff;
+  font-size: 1rem;
+  padding: 10px 24px;
+  margin-top: 19px;
+}
+.banner-img {
+  width: 475px;
+  height: 475px;
+}
+
+.camera {
+  width: 420px;
+  height: 404px;
+  position: absolute;
+  right: 245px;
+  top: 210px;
+}
+
+.circle {
+  position: relative;
+  width: 455px;
+  height: 455px;
+}
+
+@media only screen and (max-width: 576px) {
   .display-hide {
     display: none;
   }
   .menu {
     display: block;
   }
-  nav{
-    justify-content: space-around;
-    max-width: 100%;
-    margin: auto;
+  nav {
+    width: 100%;
+    margin: 0 auto;
   }
-  nav div p{
+  nav div p {
     font-size: 1rem;
   }
 }

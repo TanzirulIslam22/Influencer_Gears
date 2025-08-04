@@ -32,12 +32,18 @@
   font-weight: 400;
 }
 
+/* for display-flex */
 .flex {
   display: flex;
 }
 
+/* for menu-hide */
+.menu {
+  display: none;
+}
+
 /* Universal */
-* {
+body {
   max-width: 1110px;
   margin: 0 auto;
 }
@@ -60,4 +66,22 @@ nav div ul {
   width: 463px;
   justify-content: space-between;
   font-size: 1rem;
+}
+
+@media only screen and (max-width: 576px) {
+
+  .display-hide {
+    display: none;
+  }
+  .menu {
+    display: block;
+  }
+  nav{
+    justify-content: space-around;
+    max-width: 100%;
+    margin: auto;
+  }
+  nav div p{
+    font-size: 1rem;
+  }
 }

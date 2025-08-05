@@ -117,23 +117,27 @@ nav div ul {
   background-color: #86194f;
 }
 
-.banner-img {
-  width: 475px;
-  height: 475px;
+.circle {
+  position: relative;
+  width: 455px;
+  height: 455px;
+  z-index: 1; /* Circle at base */
 }
 
 .camera {
   width: 420px;
   height: 404px;
   position: absolute;
-  right: 245px;
-  top: 210px;
+  right: 20px;
+  top: 30px;
+  z-index: 2; /* Camera on top */
 }
 
-.circle {
-  position: relative;
-  width: 455px;
-  height: 455px;
+.banner-img {
+  width: 475px;
+  height: 475px;
+  z-index: 0; /* If needed to be behind everything */
+  position: relative; /* Important for z-index to apply */
 }
 
 /* Logos Section */
@@ -251,7 +255,7 @@ footer {
   color: #ffffff;
 }
 .footer-box {
-  width: 350px;
+  width: 360px;
   height: 139px;
 }
 .footer-title {
@@ -265,7 +269,6 @@ footer {
   justify-content: center;
   gap: 15px;
   margin-top: 10px;
-  padding: 0;
 }
 
 .footer-icons li {
@@ -276,10 +279,9 @@ footer {
 .footer-icons li:hover {
   color: #e02c6d;
 }
-.ficons{
-  padding: 10px 74px;
+.ficons {
+  padding: 10px 79px;
 }
-
 
 /* mobile responsive */
 @media only screen and (max-width: 576px) {
